@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import { Route, useParams, Link } from "react-router-dom";
+import { Route, useParams, Link, useRouteMatch } from "react-router-dom";
 import Comments from "../Components/Comments";
 import HighlightedQuote from "../Components/HighlightedQuote";
 const SingleQuote = () => {
+    const match = useRouteMatch();
     const dummy_quotes = [{
         id: 'q1', author: 'Ram', text: 'Jai shree ram'
     },
@@ -17,13 +17,13 @@ const SingleQuote = () => {
     }
     return <>
         <HighlightedQuote text={quote.text} author={quote.author} />
-        <Route path={`/quotes/${param.qouteId}`} exact>
+        <Route path={match.path} exact>
             <div className="centered">
-                <Link to={`/quotes/${param.qouteId}/comments`}>Load comments</Link>
+                <Link to={`${match.url}/comments`}>Load comments</Link>
             </div>
         </Route>
 
-        <Route path={`/quotes/${param.qouteId}/comments`}>
+        <Route path={`${match.path}/comments`}>
             <Comments />
         </Route>
 

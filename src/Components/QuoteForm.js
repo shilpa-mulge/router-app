@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Form, Card } from 'react-bootstrap';
+import { Button, Form } from 'react-bootstrap';
 import { Prompt } from 'react-router-dom';
 const QuoteForm = props => {
     const [isEntering, setIsEntering] = useState(false);
