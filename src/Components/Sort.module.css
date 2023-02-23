@@ -1,0 +1,15 @@
+.sort{
+padding-bottom: 1rem;
+border-bottom: 3px solid teal;
+margin-bottom: 2rem;
+}
+
+.sort button{
+    font:inherit;
+    color: teal;
+    border: 1px solid teal;
+    border-color: transparent;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+}
