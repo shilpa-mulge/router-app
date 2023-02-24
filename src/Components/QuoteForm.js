@@ -35,7 +35,7 @@ const QuoteForm = props => {
                     <Form.Label> Text</Form.Label>
                     <Form.Control as="textarea" rows={3} ref={inputTextRef} />
                 </Form.Group>
-                <Button varient="primary" type="submit" onClick={finishedEnteringHandler}>Add quote</Button>
+                <Button varient="primary" type="submit" onClick={finishedEnteringHandler}>{props.loading ? 'Sending...' : 'Add quote'}</Button>
             </Form>
         </React.Fragment>
     )
